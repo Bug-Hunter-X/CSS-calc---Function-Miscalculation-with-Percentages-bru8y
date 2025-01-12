@@ -1,0 +1,28 @@
+/* bugSolution.css */
+
+/* Solution 1: Using alternative layout techniques (e.g., padding) */
+.container {
+  display: flex;
+  padding-right: 20px; /* Instead of calc() */
+}
+
+/* Solution 2:  Explicitly setting the parent's width (if possible) */
+.parent {
+  width: 500px; /* Set a fixed width */
+}
+.child {
+  width: calc(100% - 20px);
+}
+
+/* Solution 3:  Using a container with a fixed size and relative positioning (if appropriate) */
+.container {
+  width: 500px;  /* Fixed width */
+  position: relative;
+}
+.child {
+  width: calc(100% - 20px);
+  position: relative;
+  left: 0;
+}
+
+/* Choose the solution that best suits your layout context.  The original issue might require careful review of the overall layout and CSS rules to identify the root cause.  */
